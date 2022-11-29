@@ -30,17 +30,16 @@ class Preprocess_text:
             output_sequence_length=self.sequence_length
 
         )
-        return vectorize_layer
+        return vectorize_layer(data)
 
     def vectorize_and_adapt(self):
         return self.vectorize_layer.adapt(self.data)
 
     def vectorize(self):
-        # return print(self.vectorize_layer(self.data))
         for t_batch, _ in self.ds:
             t = t_batch[0]
             t = tf.expand_dims(t, -1)
-            self.vectorize_layer(t)
+            self.vectoriztion_layer(t)
             print(t)
 
             # print(self.vectorize_layer(t))
