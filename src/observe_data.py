@@ -22,6 +22,7 @@ class Observe_dataset:
             cache_subdir=""
         )
         path: str = os.path.join(os.path.dirname(dataset), "aclImdb")
+        print(path)
         # rmv_tree = os.path.join(path, "train", "unsup")
         # shutil.rmtree(rmv_tree)
         return path
@@ -32,7 +33,7 @@ class Observe_dataset:
         with open(file_path, "r") as f:
             print(f.read())
 
-    def prepare_raw_training_ds(self, path, subset):
+    def prepare_raw_ds(self, path, subset):
         raw_ds = tf.keras.utils.text_dataset_from_directory(
             directory=path,
             batch_size=self.BATCH_SIZE,
@@ -41,3 +42,7 @@ class Observe_dataset:
             validation_split=0.2
         )
         return raw_ds
+
+
+if __name__ == "__main__":
+    Observe_dataset()
