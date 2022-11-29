@@ -27,7 +27,7 @@ class Observe_dataset:
         # shutil.rmtree(rmv_tree)
         return path
 
-    def read_pos(self):
+    def read_pos(self) -> None:
         file_path = os.path.join(
             self.train_pos_path, os.listdir(self.train_pos_path)[0])
         with open(file_path, "r") as f:

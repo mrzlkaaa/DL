@@ -16,7 +16,7 @@ def test_read_train_pos(od):
 
 def test_prepare_raw_ds(od):
     path, _ = os.path.split(od.train_pos_path)
-    od.prepare_raw_ds(path, "training")
+    print(type(od.prepare_raw_ds(path, "training")))
     assert 0
 
 

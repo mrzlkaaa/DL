@@ -40,7 +40,7 @@ class Preprocess_text:
             output_sequence_length=self.sequence_length
         )
 
-    def adapt_vt(self, data):
+    def adapt_vl(self, data):
         return self.vl.adapt(data)
 
         # print(self.vectorize_layer(t))
