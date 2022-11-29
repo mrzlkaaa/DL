@@ -14,13 +14,13 @@ def test_read_train_pos(od):
     assert 0
 
 
-def test_prepare_raw_training_ds(od):
+def test_prepare_raw_ds(od):
     path, _ = os.path.split(od.train_pos_path)
-    od.prepare_raw_training_ds(path, "training")
+    od.prepare_raw_ds(path, "training")
     assert 0
 
 
-def test_prepare_raw_validation_ds(od):
-    path, _ = os.path.split(od.train_pos_path)
-    od.prepare_raw_training_ds(path, "validation")
-    assert 0
+# def test_prepare_raw_validation_ds(od):
+#     path, _ = os.path.split(od.train_pos_path)
+#     od.prepare_raw_training_ds(path, "validation")
+#     assert 0
